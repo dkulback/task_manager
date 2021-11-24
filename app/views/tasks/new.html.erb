@@ -1,0 +1,9 @@
+<form action="/tasks" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p style="font-size:45px; text-align:center; color:gold;">Enter a new task:</p>
+  <h1 style="margin-bottom:-3px; font-size:20px; text-align:center;">Task Title</h1>
+  <input style="display:block; margin-left: auto; margin-right: auto;" type='text' name='task[title]'/><br/>
+  <h2 style="margin-bottom:-3px; font-size:20px; text-align:center;">Task Description</h2>
+  <textarea style="display:block; margin-left: auto; margin-right: auto;" name='task[description]'></textarea><br/>
+  <input style="display:block; margin-left: auto; margin-right: auto;" type='submit'/>
+</form>

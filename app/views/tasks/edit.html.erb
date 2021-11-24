@@ -1,0 +1,10 @@
+<form action="/tasks/<%= @task.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p style="font-size:45px; text-align:center; color:gold;">Edit</p>
+  <h1 style="margin-bottom:-3px; font-size:20px; text-align:center;">Task Title</h1>
+  <input style="display:block; margin-left: auto; margin-right: auto;" type='text' name='task[title]' value="<%= @task.title %>"/><br/>
+  <h2 style="margin-bottom:-3px; font-size:20px; text-align:center;">Task Description</h2>
+  <textarea style="display:block; margin-left: auto; margin-right: auto;" name='task[description]'><%= @task.description %></textarea><br/>
+  <input style="display:block; margin-left: auto; margin-right: auto;" type='submit'/>
+</form>
